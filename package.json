@@ -1,0 +1,8 @@
+{
+  "name": "docker-flow-bin",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "flow-bin": "0.76.0"
+  }
+}
