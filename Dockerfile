@@ -1,8 +1,10 @@
 FROM node:10.8.0-alpine
 
-RUN wget -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub &&\
-    wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.25-r0/glibc-2.25-r0.apk && \
-    apk add glibc-2.25-r0.apk && \
+ARG glibcVersion=2.29-r0
+
+RUN wget -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub &&\
+    wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/$glibcVersion/glibc-$glibcVersion.apk && \
+    apk add glibc-$glibcVersion.apk && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
 
