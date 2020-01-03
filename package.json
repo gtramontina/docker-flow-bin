@@ -3,6 +3,6 @@
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
-    "flow-bin": "0.114.0"
+    "flow-bin": "0.115.0"
   }
 }
