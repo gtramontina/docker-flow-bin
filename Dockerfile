@@ -1,4 +1,4 @@
-FROM node:10.24.0-alpine
+FROM node:10.24.1-alpine
 
 ARG glibcVersion=2.29-r0
 
